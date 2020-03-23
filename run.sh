@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -t -i thecodeco/pipelines /bin/bash
+docker run -t -i djboris88/pipelines /bin/bash

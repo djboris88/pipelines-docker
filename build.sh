@@ -1,2 +1,2 @@
 #!/bin/bash
-docker image build -t="thecodeco/pipelines" .
+docker image build -t="djboris88/pipelines" .
