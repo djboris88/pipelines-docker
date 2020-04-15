@@ -1,4 +1,4 @@
-FROM php:7.4-cli-alpine3.11
+FROM php:7.4-cli-alpine3.10
 MAINTAINER Boris Djemrovski <djboris88@gmail.com>
 
 RUN apk search --update 'node*'
