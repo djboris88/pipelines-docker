@@ -1,14 +1,12 @@
-FROM node:10-stretch-slim
+FROM php:7.3-cli-alpine
 MAINTAINER Boris Djemrovski <djboris88@gmail.com>
 
-RUN apt-get update && apt-get install -y \
-    git-core \
-    rsync \
-    php-cli php-zip unzip \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add yarn git rsync
+RUN yarn global add gulp-cli
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-RUN composer
 
-RUN npm i -g gulp-cli
+RUN composer
+RUN yarn --version
+RUN gulp --version
