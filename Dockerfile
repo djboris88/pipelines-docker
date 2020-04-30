@@ -10,10 +10,12 @@ RUN apk add --no-cache --update \
     ca-certificates \
     bash \
     nodejs \
-    nodejs-npm
+    nodejs-npm \
+    build-base \
+    ruby-dev
 
-RUN node --version
-RUN npm i -g yarn gulp-cli
+RUN gem install sass --no-rdoc --no-ri
+RUN npm i -g yarn grunt-cli
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
