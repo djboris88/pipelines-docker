@@ -12,6 +12,8 @@ RUN apk add --no-cache --update \
     nodejs \
     nodejs-npm
 
+RUN curl https://cli-assets.heroku.com/install.sh | sh
+
 RUN node --version
 RUN npm i -g yarn gulp-cli forwardslash-cli
 
