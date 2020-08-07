@@ -14,8 +14,7 @@ RUN apk add --no-cache --update \
 
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
-RUN node --version
-RUN npm i -g yarn gulp-cli forwardslash-cli
+RUN npm i -g yarn gulp-cli @fws/cli @vue/cli
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
